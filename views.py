@@ -1,5 +1,19 @@
+from django.shortcuts import render, get_object_or_404, redirect from django.core.exceptions import ObjectDoesNotExist
+from django.contrib import messages from django.utils import timezone
+from django.views.generic import ListView, DetailView, View from .models import Item, Order, OrderItem, Address
+from .forms import AddressForm
+from .forms2 import UserLoginForm, UserRegisterForm
+from django.contrib.auth import authenticate, get_user_model, login, logout User = get_user_model()
+# Create your views here. class HomeView(ListView):
+class HomeView(ListView):
+model = Item
+template_name = 'index.html'
 
- 
+class AllProductsView(ListView): model = Item
+template_name = 'products.html'
+
+
+class ProductDetail(DetailView):
 model = Item
 template_name = 'product.html'
 
