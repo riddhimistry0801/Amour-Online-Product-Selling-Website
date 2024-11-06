@@ -15,3 +15,4 @@ Frontend:
 Backend:
 •   	Django/Python
 
+Refer the google drive link for documentation - https://drive.google.com/file/d/1g-fQat_ruye5H4gcuO_ojNm0TAcTcTRF/view?usp=drive_link
